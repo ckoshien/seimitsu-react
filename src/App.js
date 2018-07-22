@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
+import store from './index'
+import { loadData } from './actions/actions';
+//import BootstrapTable from 'react-bootstrap-table-next';
+import CtrlTable from './container/CtrlTable'
 
 class App extends Component {
   componentDidMount(){
@@ -11,11 +15,19 @@ class App extends Component {
         return null;
       }
     })
+    .then((json)=>{
+      if(json!=null){
+        store.dispatch(loadData(json));
+        console.log(store.getState());
+      }
+    })
   }
   render(){
-    return(<div></div>)
+    return(
+        <CtrlTable/>
+      )
   }
 
 }
-
 export default App;
+
