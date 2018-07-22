@@ -1,0 +1,22 @@
+{
+  "name": "seimitsu-react",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-scripts": "1.1.4",
+    "react-bootstrap-table-next": "^0.1.14",
+    "react-bootstrap-table2-paginator": "^0.1.5",
+    "react-jquery-datatables": "^1.0.0",
+    "react-redux": "^5.0.7",
+    "react-tabs": "^2.2.2",
+    "redux": "^4.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
