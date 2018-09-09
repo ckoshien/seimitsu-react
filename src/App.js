@@ -4,6 +4,7 @@ import store from './index'
 import { loadData } from './actions/actions';
 //import BootstrapTable from 'react-bootstrap-table-next';
 import CtrlTable from './container/CtrlTable'
+import CtrlChart from './container/CtrlCharts'
 
 class App extends Component {
   componentDidMount(){
@@ -23,9 +24,14 @@ class App extends Component {
     })
   }
   render(){
-    return(
-        <CtrlTable/>
+    console.log(store.getState());
+      return(
+        <div>
+          <CtrlTable/>
+          <CtrlChart/>
+        </div> 
       )
+   
   }
 
 }
