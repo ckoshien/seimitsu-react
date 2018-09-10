@@ -5,6 +5,7 @@ import { loadData } from './actions/actions';
 //import BootstrapTable from 'react-bootstrap-table-next';
 import CtrlTable from './container/CtrlTable'
 import CtrlChart from './container/CtrlCharts'
+import CtrlLineChart from './container/CtrlLineChart';
 
 class App extends Component {
   componentDidMount(){
@@ -29,6 +30,7 @@ class App extends Component {
         <div>
           <CtrlTable/>
           <CtrlChart/>
+          <CtrlLineChart/>
         </div> 
       )
    

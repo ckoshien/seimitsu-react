@@ -1,53 +1,60 @@
 import React from 'react'
 import CanvasJSReact from '../lib/canvasjs.react'
-import store from '../index'
+import store from '..'
 var CanvasJS = CanvasJSReact.CanvasJS;
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
-class StackedChart extends React.Component{
+class LineChart extends React.Component{
     constructor(props){
         super(props)
     }
 
     render(){
-        CanvasJS.addColorSet('color1',[
+        CanvasJS.addColorSet('color2',[
             '#7cb5ec',
             '#434348',
             '#90ed7d',
             '#f7a35c',
-            '#8085e9'
+            '#8085e9',
+            '#f15c80'
         ])
         console.log(store.getState().data.graphList)
         if(store.getState().isloadData){
-            for(var i=0;i<10;i++){
+            for(var i=0;i<store.getState().data.resultList.length;i++){
                 options.data[0].dataPoints.push(
                     {
-                        label:store.getState().data.graphList[i].value.toString(),
-                        y:store.getState().data.graphList[i].from0to2
+                        label:store.getState().data.resultList[i].date,
+                        y:store.getState().data.resultList[i].score
                     }
                 );
                 options.data[1].dataPoints.push(
                     {
-                        label:store.getState().data.graphList[i].value.toString(),
-                        y:store.getState().data.graphList[i].from2to4
+                        label:store.getState().data.resultList[i].date,
+                        y:store.getState().data.resultList[i].chExpress
                     }
                 );
                 options.data[2].dataPoints.push(
                     {
-                        label:store.getState().data.graphList[i].value.toString(),
-                        y:store.getState().data.graphList[i].from4to6
+                        label:store.getState().data.resultList[i].date,
+                        y:store.getState().data.resultList[i].chRhythm
                     }
                 );
                 options.data[3].dataPoints.push(
                     {
-                        label:store.getState().data.graphList[i].value.toString(),
-                        y:store.getState().data.graphList[i].from6to8
+                        label:store.getState().data.resultList[i].date,
+                        y:store.getState().data.resultList[i].chInterval
                     }
                 );
                 options.data[4].dataPoints.push(
                     {
-                        label:store.getState().data.graphList[i].value.toString(),
-                        y:store.getState().data.graphList[i].from8to10
+                        label:store.getState().data.resultList[i].date,
+                        y:store.getState().data.resultList[i].chStability
+                    }
+                );
+                options.data[5].dataPoints.push(
+                    {
+                        label:store.getState().data.resultList[i].date,
+                        y:store.getState().data.resultList[i].chVibrato
                     }
                 );
             }
@@ -64,63 +71,71 @@ class StackedChart extends React.Component{
         }
     }
 }
-export default StackedChart
+export default LineChart
 
 const options = {
-    colorSet:'color1',
+    colorSet:'color2',
     animationEnabled: true,
     exportEnabled: false,
     title: {
-        text: "得点分布一覧",
+        text: "得点推移",
         fontFamily: "Noto Sans Japanese"
     },
     axisY: {
         title: "",
         prefix: "",
-        suffix: ""
+        suffix: "",
+        includeZero: false
     },
     toolTip: {
         shared: true,
-        reversed: true
+        //reversed: true
     },
     legend: {
         verticalAlign: "center",
         horizontalAlign: "right",
-        reversed: true,
+        //reversed: true,
         cursor: "pointer",
-        itemclick: this.toggleDataSeries
+        //itemclick: this.toggleDataSeries
     },
     data: [
     {
-        type: "stackedColumn",
-        name: ".0～.2",
+        type: "line",
+        name: "得点",
         showInLegend: true,
         //yValueFormatString: "#,###k",
         dataPoints: []
     },
     {
-        type: "stackedColumn",
-        name: ".2～.4",
+        type: "line",
+        name: "表現",
         showInLegend: true,
         //yValueFormatString: "#,###k",
         dataPoints: []
     },
     {
-        type: "stackedColumn",
-        name: ".4～.6",
+        type: "line",
+        name: "リズム",
         showInLegend: true,
         //yValueFormatString: "#,###k",
         dataPoints: []
     },
     {
-        type: "stackedColumn",
-        name: ".6～.8",
+        type: "line",
+        name: "音程",
         showInLegend: true,
         //yValueFormatString: "#,###k",
         dataPoints: []
     },{
-        type: "stackedColumn",
-        name: ".8～.0",
+        type: "line",
+        name: "安定性",
+        showInLegend: true,
+        //yValueFormatString: "#,###k",
+        dataPoints: []
+    },
+    {
+        type: "line",
+        name: "ビブラート",
         showInLegend: true,
         //yValueFormatString: "#,###k",
         dataPoints: []
