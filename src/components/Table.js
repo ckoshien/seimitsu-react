@@ -3,6 +3,7 @@ import BootstrapTable from 'react-bootstrap-table-next';
 import store from '../index'
 import paginationFactory from 'react-bootstrap-table2-paginator';
 import {Modal} from 'react-bootstrap'
+import { switchModal } from '../actions/actions';
 
 
 const Table=({results})=>{
@@ -15,6 +16,14 @@ const Table=({results})=>{
             rowEvents={rowEvents}
             //pagination={ paginationFactory()}
             />
+            <Modal 
+                show={store.getState().isOpenModal}
+                onHide={handleClose}
+                aria-labelledby="contained-modal-title">
+                <Modal.Body>
+
+                </Modal.Body>
+            </Modal>
             </div>
         )
     }else{
@@ -23,8 +32,14 @@ const Table=({results})=>{
     
 }
 export default Table;
+const handleClose=()=>{
+    store.dispatch(switchModal(false))
+}
+
 const rowEvents={
     onClick:(e,row,rowIndex)=>{
+        store.dispatch(switchModal(true));
+        console.log(store.getState())
         console.log(row);
         
     }
@@ -112,10 +127,16 @@ const columns=[
   },
   {
     //dataField: 'chTotal',
+    isDummyField:true,
     text: 'チ計',
     classes:'',
     //sort:true,
-    formatter:chartTotalFormatter
+    formatter:chartTotalFormatter,
+    // sortFunc: (a, b, order, dataField, rowA, rowB) => {
+    //     //console.log(row.chInterval)
+    //     if (order === 'asc') return a - b;
+    //     else return b - a;
+    //   }
   },
   {
     dataField: 'chInterval',

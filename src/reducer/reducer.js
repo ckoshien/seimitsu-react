@@ -15,7 +15,15 @@ const reducer = (state = initialState, action) => {
             isloadData:action.isloadData
           }
         )
-        default:
+      case 'OPEN_MODAL':
+        return (
+          {
+            ...state,
+            type: action.type,
+            isOpenModal:action.isOpenModal
+          }
+        )
+      default:
         return state
     }
 }

@@ -5,3 +5,9 @@ export const loadData=(data)=>{
         isloadData:true
     }
 }
+export const switchModal=(boolean)=>{
+    return{
+        type:'OPEN_MODAL',
+        isOpenModal:boolean
+    }
+}
