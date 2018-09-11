@@ -3,8 +3,10 @@ import BootstrapTable from 'react-bootstrap-table-next';
 import store from '../index'
 import paginationFactory from 'react-bootstrap-table2-paginator';
 import {Modal} from 'react-bootstrap'
-import { switchModal } from '../actions/actions';
-import RadarChart from './RadarChart';
+import { openModal,closeModal } from '../actions/actions';
+//import RadarChart from './RadarChart';
+//import Radar from './Radar'
+import RadarChart2 from './RadarChart2';
 
 
 const Table=({results})=>{
@@ -19,11 +21,8 @@ const Table=({results})=>{
             />
             <Modal 
                 show={store.getState().isOpenModal}
-                onHide={handleClose}
-                aria-labelledby="contained-modal-title">
-                <Modal.Body>
-                    <RadarChart/>
-                </Modal.Body>
+                onHide={handleClose}>
+                <RadarChart2/>
             </Modal>
             </div>
         )
@@ -34,12 +33,12 @@ const Table=({results})=>{
 }
 export default Table;
 const handleClose=()=>{
-    store.dispatch(switchModal(false))
+    store.dispatch(closeModal())
 }
 
 const rowEvents={
     onClick:(e,row,rowIndex)=>{
-        store.dispatch(switchModal(true));
+        store.dispatch(openModal(row));
         console.log(store.getState())
         console.log(row);
         

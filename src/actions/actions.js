@@ -5,9 +5,16 @@ export const loadData=(data)=>{
         isloadData:true
     }
 }
-export const switchModal=(boolean)=>{
+export const openModal=(row)=>{
     return{
         type:'OPEN_MODAL',
-        isOpenModal:boolean
+        isOpenModal:true,
+        row:row
+    }
+}
+export const closeModal=()=>{
+    return{
+        type:'CLOSE_MODAL',
+        isOpenModal:false,
     }
 }

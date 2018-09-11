@@ -20,7 +20,16 @@ const reducer = (state = initialState, action) => {
           {
             ...state,
             type: action.type,
-            isOpenModal:action.isOpenModal
+            isOpenModal:action.isOpenModal,
+            row: action.row
+          }
+        )
+        case 'CLOSE_MODAL':
+        return (
+          {
+            ...state,
+            type: action.type,
+            isOpenModal:action.isOpenModal,
           }
         )
       default:
