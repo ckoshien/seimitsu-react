@@ -4,6 +4,7 @@ import store from '../index'
 import paginationFactory from 'react-bootstrap-table2-paginator';
 import {Modal} from 'react-bootstrap'
 import { switchModal } from '../actions/actions';
+import RadarChart from './RadarChart';
 
 
 const Table=({results})=>{
@@ -21,7 +22,7 @@ const Table=({results})=>{
                 onHide={handleClose}
                 aria-labelledby="contained-modal-title">
                 <Modal.Body>
-
+                    <RadarChart/>
                 </Modal.Body>
             </Modal>
             </div>
