@@ -10,19 +10,31 @@ const options={
       max:100
     }
   },
+  legend: {
+    labels: {
+        fontColor: "white",
+        fontSize: 18
+    }
+  },
 }
+// const legend={
+//     labels: {
+//         fontColor: 'yellow'
+//     }
+// }
 
 const data = {
   labels: ['音程', '安定性', '表現', 'リズム','V&L'],
+  
   datasets: [
     {
       label: '',
-      backgroundColor: 'rgba(255,0,0,0.5)',
-      borderColor: 'rgba(179,181,198,1)',
-      pointBackgroundColor: 'rgba(179,181,198,1)',
-      pointBorderColor: '#fff',
-      pointHoverBackgroundColor: '#fff',
-      pointHoverBorderColor: 'rgba(179,181,198,1)',
+      backgroundColor: 'rgba(96, 157, 255,0.5)',
+      borderColor: 'rgba(96, 157, 255,0.5)',
+      //pointBackgroundColor: 'rgba(179,181,198,1)',
+      //pointBorderColor: '#fff',
+      //pointHoverBackgroundColor: '#fff',
+      //pointHoverBorderColor: 'rgba(179,181,198,1)',
       data: []
     }
   ]
@@ -44,7 +56,7 @@ class RadarChart2 extends React.Component{
       <div>
         {store.getState().row.artist}/{store.getState().row.songTitle}
         <br/>
-        {store.getState().row.score}点
+        <span className="score">{store.getState().row.score}</span>点
         <Radar data={data} options={options}/>
       </div>
     );

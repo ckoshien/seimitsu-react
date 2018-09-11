@@ -53,3 +53,12 @@ th {
   text-align: center;
   white-space: nowrap;
 }
+.modal-content{
+  background-color: #222222;
+  color: white;
+}
+.score{
+  font-size: 32px;
+  /*color: rgb(204, 27, 204);*/
+  text-shadow: 2px 2px 0 rgb(204, 27, 204);
+}
