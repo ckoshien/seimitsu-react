@@ -17,7 +17,7 @@ class StackedChart extends React.Component{
             '#f7a35c',
             '#8085e9'
         ])
-        console.log(store.getState().data.graphList)
+        //console.log(store.getState().data.graphList)
         if(store.getState().isloadData){
             for(var i=0;i<10;i++){
                 options.data[0].dataPoints.push(

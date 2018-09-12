@@ -62,3 +62,7 @@ th {
   /*color: rgb(204, 27, 204);*/
   text-shadow: 2px 2px 0 rgb(204, 27, 204);
 }
+.average{
+  color: yellow;
+  font-weight: bold;
+}

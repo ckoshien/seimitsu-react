@@ -18,7 +18,7 @@ class LineChart extends React.Component{
             '#8085e9',
             '#f15c80'
         ])
-        console.log(store.getState().data.graphList)
+        //console.log(store.getState().data.graphList)
         if(store.getState().isloadData){
             for(var i=0;i<store.getState().data.resultList.length;i++){
                 options.data[0].dataPoints.push(
