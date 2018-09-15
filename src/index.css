@@ -1,7 +1,9 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: Noto sans japanese;
 }
 .total_100 {
   background: #fc1;
@@ -49,6 +51,9 @@ td {
   text-align: right;
   white-space: nowrap;
 }
+.tableInModal td {
+  border: none;
+}
 th {
   text-align: center;
   white-space: nowrap;
@@ -59,10 +64,18 @@ th {
 }
 .score{
   font-size: 32px;
-  /*color: rgb(204, 27, 204);*/
-  text-shadow: 2px 2px 0 rgb(204, 27, 204);
+  font-weight: bold;
+  text-shadow: 3px 3px 0 rgb(204, 27, 204);
 }
 .average{
   color: yellow;
   font-weight: bold;
+}
+.circle{
+  /*font-size: 32px;*/
+  text-shadow: 
+    1px 1px 0 rgb(26, 170, 163),
+    -1px 1px 0 rgb(26, 170, 163),
+    1px -1px 0 rgb(26, 170, 163),
+    -1px -1px 0 rgb(26, 170, 163);
 }

@@ -75,11 +75,9 @@ class RadarChart2 extends React.Component{
     }
     return (
       <div>
-        {store.getState().row.requestNo}
-        <br/>{store.getState().row.artist} / {store.getState().row.songTitle}
-        <br/><span className="score">{store.getState().row.score}</span>点
-        {/* <br/><span className="average">平均：{store.getState().row.average.toFixed(3)}点</span> */}
+        
         <Radar data={data} options={options}/>
+        
       </div>
     );
   }

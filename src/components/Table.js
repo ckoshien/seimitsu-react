@@ -4,9 +4,7 @@ import store from '../index'
 import paginationFactory from 'react-bootstrap-table2-paginator';
 import {Modal} from 'react-bootstrap'
 import { openModal,closeModal } from '../actions/actions';
-//import RadarChart from './RadarChart';
-//import Radar from './Radar'
-import RadarChart2 from './RadarChart2';
+import ModalContents from './ModalContents'
 
 
 const Table=({results})=>{
@@ -22,7 +20,7 @@ const Table=({results})=>{
             <Modal 
                 show={store.getState().isOpenModal}
                 onHide={handleClose}>
-                <RadarChart2/>
+                <ModalContents/>
             </Modal>
             </div>
         )
