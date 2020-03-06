@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "008959931860eb7ae66f3ef1fea33221",
+    "revision": "84e5bf9c592f67c79ddccad8c43f7778",
     "url": "/seimitsu-react/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/seimitsu-react/static/css/2.cb4220c0.chunk.css"
   },
   {
-    "revision": "31e43d81d0a631a8118c",
+    "revision": "5c8fdfb063dbd14a51f3",
     "url": "/seimitsu-react/static/css/main.3ca259be.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/seimitsu-react/static/js/2.ae59bb36.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "31e43d81d0a631a8118c",
-    "url": "/seimitsu-react/static/js/main.a6511caa.chunk.js"
+    "revision": "5c8fdfb063dbd14a51f3",
+    "url": "/seimitsu-react/static/js/main.024918df.chunk.js"
   },
   {
     "revision": "f70ec6ffea1275c98c19",
