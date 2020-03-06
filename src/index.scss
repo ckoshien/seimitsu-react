@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css?family=Kosugi+Maru&display=swap');
+//@import url(//fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Kosugi Maru;
+  font-size: 10px;
+}
+
+table{
+  &.table-bordered{
+    width:95vw;
+    padding: 1;
+  }
+}
+
+.table>tbody>tr>td,
+.table>tbody>tr>th,
+.table>tfoot>tr>td,
+.table>tfoot>tr>th,
+.table>thead>tr>td,
+.table>thead>tr>th {
+  padding: 4px;
+}
+td {
+  border: solid 1px #ddd;
+  padding: 2px;
+  text-align: right;
+  white-space: nowrap;
+
+  &.total_100 {
+    background: #fc1;
+    background: -moz-linear-gradient(45deg, #fc1 0%, #ffe 100%);
+    background: -webkit-linear-gradient(45deg, #fc1 0%,#ffe 100%);
+    background: -o-linear-gradient(45deg, #fc1 0%,#ffe 100%);
+    background: -ms-linear-gradient(45deg, #fc1 0%,#ffe 100%);
+    background: linear-gradient(45deg, #fc1 0%,#ffe 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fc1', endColorstr='#ffe',GradientType=1 );
+  }
+  &.date {
+    max-width: 10em;
+  }
+  &.total_over99 {
+    background-color: #ffa;
+  }
+  
+  &.total_over98 {
+    background-color: #cfc;
+  }
+  
+  &.total_over95 {
+    background-color: #aff;
+  }
+  
+  &.total_over90 {
+    background-color: #ccf;
+  }
+  
+  &.total_over85 {
+    background-color: #fbf;
+  }
+  
+  &.total_over80 {
+    background-color: #fcd;
+  }
+  &.songName{
+    max-width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+  }
+}
+
+
+
+
+.tableInModal td {
+  border: none;
+}
+th {
+  text-align: center;
+  //white-space: nowrap;
+}
+.modal-content{
+  background-color: #222222;
+  color: white;
+}
+.score{
+  font-size: 32px;
+  font-weight: bold;
+  text-shadow: 3px 3px 0 rgb(204, 27, 204);
+}
+.average{
+  color: yellow;
+  font-weight: bold;
+}
+.circle{
+  /*font-size: 32px;*/
+  text-shadow: 
+    1px 1px 0 rgb(26, 170, 163),
+    -1px 1px 0 rgb(26, 170, 163),
+    1px -1px 0 rgb(26, 170, 163),
+    -1px -1px 0 rgb(26, 170, 163);
+}
+
+.modal-dialog {
+  position: absolute;
+  top: 50%;
+  left: 46%;
+  transform: translate(-50%, -50%) !important;
+}

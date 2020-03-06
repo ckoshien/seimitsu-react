@@ -6,20 +6,30 @@ import {Modal} from 'react-bootstrap'
 import { openModal,closeModal } from '../actions/actions';
 import ModalContents from './ModalContents'
 
-
 const Table=({results})=>{
     if(store.getState().isloadData){
         return(
-            <div className='col s12'>
-            <BootstrapTable keyField={'artist songTitle'}
+            <div
+                style={{
+                    width:'95%',
+                    overflow:'scroll',
+                    padding:5
+                }}
+            >
+            <BootstrapTable
+            keyField={'artist songTitle'}
             data={ results.data.maxResultList } 
             columns={ columns }
             rowEvents={rowEvents}
-            //pagination={ paginationFactory()}
+            pagination={ paginationFactory({
+                sizePerPage:20
+            })}
             />
             <Modal 
                 show={store.getState().isOpenModal}
-                onHide={handleClose}>
+                onHide={handleClose}
+                animation={false}
+            >
                 <ModalContents/>
             </Modal>
             </div>
@@ -59,8 +69,10 @@ const dateFormatter=(cell,row)=>{
 }
 const songFormatter=(cell,row)=>{
     return (
-    <span>
-    {cell}/{row.artist}</span>)
+        <div>
+            <div>{cell}</div>
+            <div>{row.artist}</div>
+        </div>);
 }
 
 const judgePointStyle=(cell,row)=>{
@@ -96,7 +108,7 @@ const columns=[
   {
       dataField: 'date',
       text: '日付',
-      classes:'',
+      classes:'date',
       sort:true,
       formatter: dateFormatter,
 
@@ -126,7 +138,7 @@ const columns=[
   {
     //dataField: 'chTotal',
     isDummyField:true,
-    text: 'チ計',
+    text: 'チャ計',
     classes:'',
     //sort:true,
     formatter:chartTotalFormatter,
@@ -138,25 +150,25 @@ const columns=[
   },
   {
     dataField: 'chInterval',
-    text: '音',
+    text: '音程',
     classes:judgePointStyle,
     sort:true,
    },
    {
     dataField: 'chStability',
-    text: '安',
+    text: '安定',
     classes:judgePointStyle,
     sort:true,
    },
    {
     dataField: 'chExpress',
-    text: '表',
+    text: '表現',
     classes:judgePointStyle,
     sort:true,
    },
    {
     dataField: 'chRhythm',
-    text: 'リ',
+    text: 'リズ',
     classes:judgePointStyle,
     sort:true,
    },
@@ -168,7 +180,7 @@ const columns=[
    },
    {
     dataField: 'modulation',
-    text: '抑',
+    text: '抑揚',
     classes:'int',
     sort:true,
     headerStyle: {
@@ -179,31 +191,31 @@ const columns=[
    },
    {
     dataField: 'measure',
-    text: 'こ',
+    text: 'こぶ',
     classes:'int',
     sort:true,
    },
    {
     dataField: 'sob',
-    text: 'し',
+    text: 'しゃ',
     classes:'int',
     sort:true,
    },
    {
     dataField: 'fall',
-    text: 'フ',
+    text: 'フォール',
     classes:'int',
     sort:true,
    },
    {
     dataField: 'longTone',
-    text: 'ロ',
+    text: 'ロング',
     classes:'int',
     sort:true,
    },
    {
     dataField: 'vibrato',
-    text: 'ビ',
+    text: 'ビブ',
     classes:'int',
     sort:true,
    },

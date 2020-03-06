@@ -4,6 +4,7 @@ import 'chartjs-plugin-datalabels'
 import store from '..';
 
 const options={
+  animation:false,
   legend:{
     display:false
   },

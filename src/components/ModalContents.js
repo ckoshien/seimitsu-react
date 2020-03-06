@@ -6,14 +6,25 @@ class ModalContents extends React.Component{
     render(){
         if(store.getState().isOpenModal){
             return(
-                <span>
+                <div
+                    style={{
+                        padding:5
+                    }}
+                >
                 {store.getState().row.requestNo}
-                <br/>
-                <b>{store.getState().row.artist} / {store.getState().row.songTitle}</b>
-                <br/><span className="score">{store.getState().row.score}</span>点
-                <br/><span className="average">歌唱平均：{store.getState().row.average.toFixed(3)}点</span>
+                <div
+                    style={{
+                        fontWeight:'bold'
+                    }}
+                >
+                {store.getState().row.artist}
+                <br/>{store.getState().row.songTitle}
+                </div>
+                <span className="score">{store.getState().row.score}</span>点
+                <br/><span className="average">自己歌唱平均：{store.getState().row.average.toFixed(3)}点</span>
                 <RadarChart2/>
                 <table className="tableInModal">
+                    <tbody>
                     <tr>
                         <td>安定性：<span className="circle">{store.getState().row.stability}</span></td>
                         <td>
@@ -36,8 +47,9 @@ class ModalContents extends React.Component{
                         <td>リズム<span className="circle">{store.getState().row.rhythm}</span></td>
                         <td>音域<span className="circle">{store.getState().row.lowPitch}～{store.getState().row.highPitch}</span></td>
                     </tr>
+                    </tbody>
                 </table>
-                </span>
+                </div>
             )
         }else{
             return(<div></div>)
