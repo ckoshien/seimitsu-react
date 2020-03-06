@@ -10,6 +10,7 @@ class StackedChart extends React.Component {
   }
 
   options = {
+    width:350,
     colorSet: "color1",
     animationEnabled: true,
     exportEnabled: false,
@@ -106,7 +107,11 @@ class StackedChart extends React.Component {
       }
 
       return (
-        <div>
+        <div
+          style={{
+            width:'100vw'
+          }}
+        >
           <CanvasJSChart
             options={this.options}
             onRef={ref => (this.chart = ref)}

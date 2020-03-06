@@ -74,6 +74,7 @@ class LineChart extends React.Component{
 export default LineChart
 
 const options = {
+    width:350,
     colorSet:'color2',
     animationEnabled: true,
     exportEnabled: false,

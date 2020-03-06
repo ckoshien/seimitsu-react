@@ -20,7 +20,7 @@ class ModalContents extends React.Component{
                 {store.getState().row.artist}
                 <br/>{store.getState().row.songTitle}
                 </div>
-                <span className="score">{store.getState().row.score}</span>点
+                <span className="score">{store.getState().row.score.toFixed(3)}</span>点
                 <br/><span className="average">自己歌唱平均：{store.getState().row.average.toFixed(3)}点</span>
                 <RadarChart2/>
                 <table className="tableInModal">
