@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/seimitsu-react/static/css/main.3ca259be.chunk.css",
+    "main.js": "/seimitsu-react/static/js/main.a6511caa.chunk.js",
+    "main.js.map": "/seimitsu-react/static/js/main.a6511caa.chunk.js.map",
+    "runtime-main.js": "/seimitsu-react/static/js/runtime-main.49122e8b.js",
+    "runtime-main.js.map": "/seimitsu-react/static/js/runtime-main.49122e8b.js.map",
+    "static/css/2.cb4220c0.chunk.css": "/seimitsu-react/static/css/2.cb4220c0.chunk.css",
+    "static/js/2.ae59bb36.chunk.js": "/seimitsu-react/static/js/2.ae59bb36.chunk.js",
+    "static/js/2.ae59bb36.chunk.js.map": "/seimitsu-react/static/js/2.ae59bb36.chunk.js.map",
+    "index.html": "/seimitsu-react/index.html",
+    "precache-manifest.8cb708b084e1814ea23d8619e79d99ea.js": "/seimitsu-react/precache-manifest.8cb708b084e1814ea23d8619e79d99ea.js",
+    "service-worker.js": "/seimitsu-react/service-worker.js",
+    "static/css/2.cb4220c0.chunk.css.map": "/seimitsu-react/static/css/2.cb4220c0.chunk.css.map",
+    "static/css/main.3ca259be.chunk.css.map": "/seimitsu-react/static/css/main.3ca259be.chunk.css.map",
+    "static/js/2.ae59bb36.chunk.js.LICENSE.txt": "/seimitsu-react/static/js/2.ae59bb36.chunk.js.LICENSE.txt",
+    "static/media/bootstrap.min.css": "/seimitsu-react/static/media/glyphicons-halflings-regular.fa277232.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.49122e8b.js",
+    "static/css/2.cb4220c0.chunk.css",
+    "static/js/2.ae59bb36.chunk.js",
+    "static/css/main.3ca259be.chunk.css",
+    "static/js/main.a6511caa.chunk.js"
+  ]
+}
