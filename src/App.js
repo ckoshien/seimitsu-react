@@ -5,6 +5,7 @@ import { Tab,Tabs } from 'react-bootstrap';
 import CtrlTable from './container/CtrlTable'
 import CtrlChart from './container/CtrlCharts'
 import CtrlLineChart from './container/CtrlLineChart';
+import AverageDistChart from './components/AverageDistChart';
 
 class App extends Component {
   componentDidMount(){
@@ -32,11 +33,11 @@ class App extends Component {
               <CtrlTable/>
             </Tab>
             <Tab title={'点数分布'} eventKey={1}>
-              <CtrlChart/>
+              <AverageDistChart/>
             </Tab>
-            <Tab title={'成績推移'} eventKey={2}>
-              <CtrlLineChart/>
-            </Tab>
+            {/* <Tab title={'成績推移'} eventKey={2}>
+              <CtrlLineChart/> 
+            </Tab> */}
           </Tabs>
         </div> 
       )
