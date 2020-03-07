@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "84e5bf9c592f67c79ddccad8c43f7778",
+    "revision": "4c1d8a52c2df124ca47f91a6167affe6",
     "url": "/seimitsu-react/index.html"
   },
   {
-    "revision": "954d0c7f5baa5f5c731e",
+    "revision": "480c25461c15586de94f",
     "url": "/seimitsu-react/static/css/2.cb4220c0.chunk.css"
   },
   {
-    "revision": "5c8fdfb063dbd14a51f3",
+    "revision": "df6d44b8c61b40382e5d",
     "url": "/seimitsu-react/static/css/main.3ca259be.chunk.css"
   },
   {
-    "revision": "954d0c7f5baa5f5c731e",
-    "url": "/seimitsu-react/static/js/2.ae59bb36.chunk.js"
+    "revision": "480c25461c15586de94f",
+    "url": "/seimitsu-react/static/js/2.34a809f1.chunk.js"
   },
   {
     "revision": "a59b24c879ff02c1061ee81511e52db9",
-    "url": "/seimitsu-react/static/js/2.ae59bb36.chunk.js.LICENSE.txt"
+    "url": "/seimitsu-react/static/js/2.34a809f1.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5c8fdfb063dbd14a51f3",
-    "url": "/seimitsu-react/static/js/main.024918df.chunk.js"
+    "revision": "df6d44b8c61b40382e5d",
+    "url": "/seimitsu-react/static/js/main.b936d418.chunk.js"
   },
   {
     "revision": "f70ec6ffea1275c98c19",

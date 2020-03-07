@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/seimitsu-react/precache-manifest.c01c9ef56376a0165fbef3db47ddd867.js"
+  "/seimitsu-react/precache-manifest.a3130eb204980e9b7f21b9e1f860e18c.js"
 );
 
 self.addEventListener('message', (event) => {
